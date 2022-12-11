@@ -6,7 +6,7 @@ fn empty_option_err() -> Report {
     Error::new(Other, "Option was empty").into()
 }
 
-static INPUT: &str = include_str!("../input");
+static INPUT: &str = include_str!("input");
 
 fn main() -> Result<()> {
     color_eyre::install()?;
@@ -37,7 +37,7 @@ mod test {
     #[allow(unused)]
     use pretty_assertions::{assert_eq, assert_ne};
 
-    static INPUT: &str = include_str!("../test_input");
+    static INPUT: &str = include_str!("test_input");
 
     #[test]
     fn parse_test_input() -> Result<()> {

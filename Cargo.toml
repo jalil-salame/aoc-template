@@ -6,6 +6,10 @@ edition = "2021"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
+[[bin]]
+name = "{{project-name}}"
+path = "main.rs"
+
 [dependencies]
 {% if within_cargo_project %}
 nom.workspace = true
