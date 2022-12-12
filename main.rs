@@ -1,4 +1,5 @@
 use color_eyre::{Report, Result};
+use std::time::Instant;
 
 #[allow(dead_code)]
 fn empty_option_err() -> Report {
@@ -11,13 +12,45 @@ static INPUT: &str = include_str!("input");
 fn main() -> Result<()> {
     color_eyre::install()?;
 
-    let data = parse::input(INPUT)?;
-    println!("{data:?}");
+    let now = Instant::now();
 
-    let p1_solution = "Nothing Yet";
-    let p2_solution = "Nothing Yet";
+    let _ = {
+        let now = Instant::now();
 
-    println!("Problem 1: {p1_solution}\nProblem 2: {p2_solution}");
+        let data = parse::input(INPUT)?.1;
+
+        println!("Parsing took:    {:16>?}", now.elapsed());
+        data
+    };
+
+    let now_ = Instant::now();
+
+    // Add common data structures to Problem 1 and Problem 2 here
+
+    println!("Processing took: {:16>?}", now_.elapsed());
+
+    let problem_1_solution = {
+        let now = Instant::now();
+
+        let solution = "Nothing yet";
+
+        println!("Problem 1 took:  {:16>?}", now.elapsed())
+        solution
+    };
+
+    let problem_2_solution = {
+        let now = Instant::now();
+
+        let solution = "Nothing yet";
+
+        println!("Problem 2 took:  {:16>?}", now.elapsed())
+        solution
+    };
+
+    println!("Total runtime:   {:16>?}", now.elapsed());
+    println!("----------------O----------------");
+    println!("Problem 1:       {problem_1_solution:16>}");
+    println!("Problem 2:       {problem_2_solution:16>}");
 
     Ok(())
 }
