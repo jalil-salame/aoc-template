@@ -19,7 +19,7 @@ fn main() -> Result<()> {
 
         let data = parse::input(INPUT)?.1;
 
-        println!("Parsing took:    {:16>?}", now.elapsed());
+        println!("Parsing took:    {:>16?}", now.elapsed());
         data
     };
 
@@ -27,14 +27,14 @@ fn main() -> Result<()> {
 
     // Add common data structures to Problem 1 and Problem 2 here
 
-    println!("Processing took: {:16>?}", now_.elapsed());
+    println!("Processing took: {:>16?}", now_.elapsed());
 
     let problem_1_solution = {
         let now = Instant::now();
 
         let solution = "Nothing yet";
 
-        println!("Problem 1 took:  {:16>?}", now.elapsed())
+        println!("Problem 1 took:  {:>16?}", now.elapsed())
         solution
     };
 
@@ -43,14 +43,14 @@ fn main() -> Result<()> {
 
         let solution = "Nothing yet";
 
-        println!("Problem 2 took:  {:16>?}", now.elapsed())
+        println!("Problem 2 took:  {:>16?}", now.elapsed())
         solution
     };
 
-    println!("Total runtime:   {:16>?}", now.elapsed());
+    println!("Total runtime:   {:>16?}", now.elapsed());
     println!("----------------O----------------");
-    println!("Problem 1:       {problem_1_solution:16>}");
-    println!("Problem 2:       {problem_2_solution:16>}");
+    println!("Problem 1:       {problem_1_solution:>16}");
+    println!("Problem 2:       {problem_2_solution:>16}");
 
     Ok(())
 }
