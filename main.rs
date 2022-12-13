@@ -74,37 +74,38 @@ mod test {
 
     #[test]
     fn parse_test_input() -> Result<()> {
-        let (rest, data) = parse::input(INPUT)?;
+        let (rest, _) = parse::input(INPUT)?;
+
         assert_eq!(rest, "");
-        assert_eq!(data, ((),));
 
         Ok(())
     }
 
     #[test]
     fn parse_input() -> Result<()> {
-        let (rest, data) = parse::input(crate::INPUT)?;
+        let (rest, _) = parse::input(crate::INPUT)?;
 
         assert_eq!(rest, "");
-        assert_eq!(data, ((),));
 
         Ok(())
     }
 
     #[test]
+    #[ignore]
     fn problem_1() -> Result<()> {
         let data = parse::input(INPUT)?.1;
 
-        assert_eq!(data, ((),));
+        todo!();
 
         Ok(())
     }
 
     #[test]
+    #[ignore]
     fn problem_2() -> Result<()> {
-        let data = parse::input(INPUT)?.1;
+        let _ = parse::input(INPUT)?.1;
 
-        assert_eq!(data, ((),));
+        todo!();
 
         Ok(())
     }
