@@ -34,7 +34,7 @@ fn main() -> Result<()> {
 
         let solution = "Nothing yet";
 
-        println!("Problem 1 took:  {:>16?}", now.elapsed())
+        println!("Problem 1 took:  {:>16?}", now.elapsed());
         solution
     };
 
@@ -43,7 +43,7 @@ fn main() -> Result<()> {
 
         let solution = "Nothing yet";
 
-        println!("Problem 2 took:  {:>16?}", now.elapsed())
+        println!("Problem 2 took:  {:>16?}", now.elapsed());
         solution
     };
 
